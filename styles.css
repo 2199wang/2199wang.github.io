@@ -6768,3 +6768,437 @@ body.gate-locked #app {
     box-shadow: 0 0 0 6px rgba(141, 107, 255, 0.13), 0 0 44px rgba(141, 107, 255, 0.42);
   }
 }
+
+/* =========================================================
+   手机舒适度 · 比例与触控优化
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .site-head,
+  .flow-head,
+  .quiz-head,
+  .result-head {
+    padding-top: calc(15px + env(safe-area-inset-top));
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .landing-hero {
+    padding: 24px 18px calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .landing-lede {
+    font-size: 12.5px;
+    line-height: 1.85;
+  }
+
+  .landing-subline {
+    font-size: 11.5px;
+  }
+
+  .landing-facts b {
+    font-size: 17px;
+  }
+
+  .landing-facts small {
+    font-size: 7.5px;
+  }
+
+  .landing-note {
+    font-size: 7px;
+    line-height: 1.7;
+  }
+
+  .landing-actions .btn-main {
+    min-height: 60px;
+  }
+
+  .landing-actions .btn-quiet {
+    min-height: 44px;
+  }
+
+  .console-head {
+    padding: 8px 11px;
+    font-size: 5px;
+  }
+
+  .console-orb strong {
+    font-size: 30px;
+  }
+
+  .console-persona b {
+    font-size: 26px;
+  }
+
+  .setup-main {
+    gap: 24px;
+    padding: 26px 18px calc(34px + env(safe-area-inset-bottom));
+  }
+
+  .setup-copy h2 {
+    font-size: clamp(36px, 9.5vw, 42px);
+  }
+
+  .setup-lede {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .setup-form {
+    padding: 22px 18px 24px;
+  }
+
+  .field-label {
+    font-size: 10px;
+  }
+
+  .name-input {
+    font-size: 44px;
+  }
+
+  .stage-field {
+    margin-top: 22px;
+  }
+
+  .stage-list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .stage-chip {
+    display: flex;
+    grid-column: span 2;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 9px 8px;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .stage-chip:nth-child(4),
+  .stage-chip:nth-child(5) {
+    grid-column: span 3;
+  }
+
+  .setup-form .btn-main {
+    min-height: 58px;
+    margin-top: 22px;
+  }
+
+  .btn-quiet--center {
+    min-height: 42px;
+    font-size: 11px;
+  }
+
+  .quiz-head {
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .quiz-progress {
+    gap: 8px;
+  }
+
+  #quiz-count {
+    font-size: 8px;
+  }
+
+  .round-back,
+  .quiz-close {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+  }
+
+  .quiz-main {
+    padding: 16px 18px calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .quiz-grid {
+    gap: 12px;
+  }
+
+  .quiz-rail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 9px;
+    min-height: 40px;
+  }
+
+  .rail-part {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .rail-number {
+    margin: 0;
+    font-size: 38px;
+    line-height: 0.9;
+  }
+
+  .rail-en,
+  .rail-note,
+  .rail-rule {
+    display: none;
+  }
+
+  .question-meta {
+    margin-bottom: 9px;
+  }
+
+  .part-pill {
+    padding: 5px 8px;
+    font-size: 7px;
+  }
+
+  .question-index {
+    font-size: 7.5px;
+  }
+
+  .question-title {
+    font-size: clamp(27px, 7.8vw, 34px);
+    line-height: 1.32;
+  }
+
+  .question-hint {
+    margin-top: 7px;
+    font-size: 10.5px;
+    line-height: 1.6;
+  }
+
+  .option-list {
+    gap: 9px;
+    margin-top: 17px;
+  }
+
+  .option {
+    min-height: 68px;
+    grid-template-columns: 30px 1fr 14px;
+    gap: 10px;
+    padding: 13px 14px;
+    border-radius: 14px;
+  }
+
+  .option-text {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .option-num {
+    font-size: 9px;
+  }
+
+  .quiz-foot {
+    margin-top: 16px;
+    padding-top: 12px;
+  }
+
+  .back-btn {
+    min-height: 40px;
+    padding-right: 8px;
+    font-size: 10px;
+  }
+
+  .result-head {
+    padding-bottom: 8px;
+  }
+
+  .result-head-actions {
+    gap: 10px;
+  }
+
+  .result-head .nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 2px;
+  }
+
+  .result-hero {
+    padding-top: calc(84px + env(safe-area-inset-top));
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+
+  .result-sub {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .hero-share {
+    min-height: 42px;
+    padding: 9px 14px;
+    font-size: 9px;
+  }
+
+  .result-body {
+    padding: 38px 18px calc(28px + env(safe-area-inset-bottom));
+  }
+
+  .result-section {
+    margin-bottom: 46px;
+  }
+
+  .section-head {
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .evidence-row {
+    padding: 14px 0;
+  }
+
+  .evidence-name {
+    font-size: 13px;
+  }
+
+  .evidence-value {
+    font-size: 18px;
+  }
+
+  .evidence-note {
+    padding: 20px 19px;
+  }
+
+  .note-text {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .persona-feature {
+    padding: 26px 21px;
+  }
+
+  .persona-feature h3 {
+    font-size: 44px;
+  }
+
+  .persona-feature .tagline {
+    font-size: 17px;
+  }
+
+  .persona-feature .desc {
+    font-size: 11.5px;
+  }
+
+  .persona-mini {
+    padding: 18px 19px;
+  }
+
+  .next-card {
+    min-height: 170px;
+  }
+
+  .next-card p {
+    font-size: 11.5px;
+    line-height: 1.8;
+  }
+
+  .share-cta {
+    padding: 28px 21px;
+  }
+
+  .share-cta p {
+    font-size: 11.5px;
+  }
+
+  .result-disclaimer {
+    font-size: 8.5px;
+    line-height: 1.8;
+  }
+
+  .result-footer {
+    padding-bottom: calc(17px + env(safe-area-inset-bottom));
+  }
+
+  .modal-panel {
+    max-height: calc(100svh - 18px - env(safe-area-inset-bottom));
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+
+  .modal-close {
+    width: 44px;
+    height: 44px;
+  }
+
+  .share-frame {
+    max-width: min(240px, 64vw);
+  }
+
+  .share-actions .btn-main,
+  .share-actions .btn-outline {
+    min-height: 56px;
+  }
+
+  .gate {
+    padding: calc(14px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom));
+  }
+
+  .gate-hint {
+    font-size: 8px;
+  }
+
+  .gate-input {
+    height: 60px;
+    font-size: 26px;
+  }
+
+  .gate-submit {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 360px) {
+  .landing-title {
+    font-size: 36px;
+  }
+
+  .landing-lede {
+    font-size: 12px;
+  }
+
+  .setup-copy h2 {
+    font-size: 35px;
+  }
+
+  .name-input {
+    font-size: 40px;
+  }
+
+  .stage-chip {
+    padding: 8px 11px;
+    font-size: 10.5px;
+  }
+
+  .question-title {
+    font-size: 26px;
+  }
+
+  .option {
+    min-height: 64px;
+    padding: 12px 13px;
+  }
+
+  .option-text {
+    font-size: 14px;
+  }
+
+  .score-num {
+    font-size: 112px;
+  }
+
+  .result-verdict {
+    font-size: 31px;
+  }
+
+  .hero-share {
+    font-size: 8.5px;
+  }
+}

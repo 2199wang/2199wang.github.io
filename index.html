@@ -11,7 +11,7 @@
   <meta name="twitter:card" content="summary">
   <title>心动回响 · Ta是不是也在偷偷喜欢你？</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23070511'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23C9B8FF' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='9' fill='none' stroke='%23F0D58A' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%23FFFFFF'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=20261116-3">
+  <link rel="stylesheet" href="styles.css?v=20261116-4">
 </head>
 <body class="gate-locked">
   <div class="grain" aria-hidden="true"></div>
@@ -440,16 +440,6 @@
         }, 430);
       }
 
-      function showToast(message) {
-        var toast = document.getElementById('toast');
-        if (!toast) return;
-        toast.textContent = message;
-        toast.classList.add('is-visible');
-        setTimeout(function () {
-          toast.classList.remove('is-visible');
-        }, 2800);
-      }
-
       function unlock() {
         if (unlocked) return;
         unlocked = true;
@@ -464,19 +454,23 @@
 
         setTimeout(function () {
           gate.style.display = 'none';
+          window.scrollTo(0, 0);
           var start = document.getElementById('btn-start');
-          if (start) {
-            start.classList.add('is-calling');
+          if (start) start.classList.add('is-calling');
+          var title = document.querySelector('.landing-title');
+          if (title) {
+            title.setAttribute('tabindex', '-1');
             try {
-              start.focus({ preventScroll: true });
+              title.focus({ preventScroll: true });
             } catch (focusError) {
-              start.focus();
+              title.focus();
             }
+          }
+          if (start) {
             setTimeout(function () {
               start.classList.remove('is-calling');
             }, 2900);
           }
-          showToast('暗号正确 · 点击「开始侦测」进入测试');
         }, 720);
       }
 
