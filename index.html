@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#070511">
+  <meta name="description" content="心动回响：20 个细节，测出Ta是否也在偷偷喜欢你，以及你在暗恋里是哪一种人格。不是读心术，是把你的直觉翻译成答案。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="心动回响 · Ta是不是也在偷偷喜欢你？">
+  <meta property="og:description" content="20 个心动信号，测出Ta的回响指数与你的暗恋人格。">
+  <meta name="twitter:card" content="summary">
+  <title>心动回响 · Ta是不是也在偷偷喜欢你？</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23070511'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23C9B8FF' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='9' fill='none' stroke='%23F0D58A' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%23FFFFFF'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=20261116-3">
+</head>
+<body class="gate-locked">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+  <div class="ambient ambient--three" aria-hidden="true"></div>
+
+  <div class="gate" id="password-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-stars" aria-hidden="true">
+      <span class="gate-orbit gate-orbit--one"></span>
+      <span class="gate-orbit gate-orbit--two"></span>
+      <span class="gate-star gate-star--one">✦</span>
+      <span class="gate-star gate-star--two">✧</span>
+      <span class="gate-star gate-star--three">✦</span>
+    </div>
+    <div class="gate-card">
+      <div class="gate-brand">
+        <span class="gate-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <circle cx="22" cy="22" r="17" stroke="currentColor" stroke-width="1.3"/>
+            <circle cx="22" cy="22" r="9" stroke="currentColor" stroke-width="1.1" stroke-dasharray="2 3"/>
+            <circle cx="22" cy="22" r="3" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="gate-brand-copy"><strong>心动回响</strong><small>CRUSH ECHO</small></span>
+      </div>
+      <p class="gate-kicker"><span></span> PRIVATE SIGNAL / ACCESS</p>
+      <h1 class="gate-title" id="gate-title">输入暗号，<br><em>解锁心动回响。</em></h1>
+      <p class="gate-sub">这场心动，只对拿到暗号的人开放。</p>
+      <form class="gate-form" id="gate-form" novalidate>
+        <div class="gate-label-row">
+          <label for="gate-input">ACCESS CODE</label>
+          <span>04 DIGITS</span>
+        </div>
+        <div class="gate-field">
+          <input class="gate-input" id="gate-input" type="password" inputmode="numeric" maxlength="4" autocomplete="off" aria-describedby="gate-error gate-hint" aria-label="四位访问密码">
+          <button class="gate-submit" type="submit" aria-label="验证并进入">→</button>
+        </div>
+        <p class="gate-error" id="gate-error" aria-live="polite"></p>
+        <p class="gate-hint" id="gate-hint">输入 4 位数字后自动验证 · 也可以按 → 进入</p>
+      </form>
+      <div class="gate-foot">
+        <span>INVITE ONLY</span>
+        <span>BUILD 1116 / ACCESS</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" aria-hidden="true">
+    <!-- 首页 -->
+    <section class="view view--landing is-active" id="view-landing" aria-label="心动回响首页">
+      <header class="site-head">
+        <button class="brand" type="button" data-go-home aria-label="心动回响首页">
+          <span class="brand-signal" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none">
+              <circle cx="22" cy="22" r="17.5" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="22" cy="22" r="10" stroke="currentColor" stroke-width="1.1" stroke-dasharray="2 3"/>
+              <circle cx="22" cy="22" r="3.2" fill="currentColor"/>
+              <path d="M22 4.5v5M22 34.5v5M4.5 22h5M34.5 22h5" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <strong>心动回响</strong>
+            <small>CRUSH ECHO</small>
+          </span>
+        </button>
+        <nav class="site-nav" aria-label="主导航">
+          <button class="nav-link" type="button" data-open-index>10 种暗恋人格 <sup>↗</sup></button>
+          <span class="nav-meta">SECRET SIGNAL LAB / 2026</span>
+        </nav>
+      </header>
+
+      <main class="landing-hero">
+        <div class="landing-sky" aria-hidden="true">
+          <span class="sky-orbit sky-orbit--one"></span>
+          <span class="sky-orbit sky-orbit--two"></span>
+          <span class="sky-orbit sky-orbit--three"></span>
+          <span class="sky-star sky-star--one">✦</span>
+          <span class="sky-star sky-star--two">✧</span>
+          <span class="sky-star sky-star--three">✦</span>
+          <span class="sky-star sky-star--four">✧</span>
+          <span class="sky-shooting"></span>
+        </div>
+
+        <div class="landing-center">
+          <p class="eyebrow landing-eyebrow"><span class="live-dot"></span> SECRET SIGNAL TEST <span class="eyebrow-rule"></span> 2026</p>
+          <div class="title-wrap">
+            <span class="title-side title-side--left" aria-hidden="true">SECRET SIGNAL / 001</span>
+            <h1 class="landing-title">
+              <span class="title-line title-line--one"><span class="title-text">Ta是不是，</span></span>
+              <span class="title-line title-line--two"><span class="title-text"><span class="title-soft">也在</span><span class="highlight">偷偷</span>喜欢你？<i class="title-spark" aria-hidden="true">✦</i></span></span>
+            </h1>
+            <span class="title-side title-side--right" aria-hidden="true">未说出口的心动</span>
+          </div>
+          <p class="landing-subline"><span>IS IT MUTUAL?</span><em>未说出口的心动，也会留下回声。</em></p>
+          <p class="landing-lede">20 个细节，捕捉那些没说出口的心动。<br>不是读心术，是把你的直觉翻译成答案。</p>
+          <div class="landing-actions">
+            <button class="btn-main" type="button" id="btn-start">
+              <span>开始侦测</span>
+              <span class="btn-symbol" aria-hidden="true">
+                <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9.5" stroke="currentColor" stroke-width="1.2"/><circle cx="14" cy="14" r="4" fill="currentColor"/><path d="M20 20l3.5 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              </span>
+            </button>
+            <button class="btn-quiet" type="button" data-open-index>
+              <span>先看暗恋人格</span><span class="quiet-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div class="landing-facts">
+            <span><b>20</b><small>个心动信号</small></span>
+            <span><b>5</b><small>个观察维度</small></span>
+            <span><b>3</b><small>分钟完成</small></span>
+          </div>
+          <p class="landing-note">基于你对Ta的观察，不构成读心或情感保证。</p>
+
+          <div class="signal-console" aria-label="心动回响样例">
+            <div class="console-head">
+              <span>LIVE SAMPLE / CASE 001</span>
+              <span>SCANNING FOR RECIPROCITY <i></i></span>
+            </div>
+            <div class="console-body">
+              <div class="console-orb" aria-hidden="true">
+                <span class="c-ring c-ring--one"></span>
+                <span class="c-ring c-ring--two"></span>
+                <span class="c-ring c-ring--three"></span>
+                <span class="c-sweep"></span>
+                <span class="c-core"></span>
+                <strong>78<small>%</small></strong>
+                <em>HEART ECHO</em>
+              </div>
+              <div class="console-persona">
+                <span>你可能是</span>
+                <b>余光惯犯</b>
+                <small>EYE CONTACT CRIMINAL</small>
+              </div>
+              <div class="console-channels" aria-hidden="true">
+                <span class="console-channel" style="--ch:var(--star-pink);--pct:92%"><i></i><b>92</b><small>主动</small></span>
+                <span class="console-channel" style="--ch:var(--star-gold);--pct:78%"><i></i><b>78</b><small>关注</small></span>
+                <span class="console-channel" style="--ch:var(--star-lav);--pct:85%"><i></i><b>85</b><small>特殊</small></span>
+                <span class="console-channel" style="--ch:var(--star-mint);--pct:64%"><i></i><b>64</b><small>身体</small></span>
+                <span class="console-channel" style="--ch:var(--star-blue);--pct:71%"><i></i><b>71</b><small>情绪</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="landing-coord landing-coord--left" aria-hidden="true">N 31°14′ / E 121°28′</span>
+        <span class="landing-coord landing-coord--right" aria-hidden="true">SIGNAL FREQUENCY 7.8 Hz</span>
+      </main>
+
+      <div class="signal-ticker" aria-label="心动信号示例">
+        <div class="ticker-track">
+          <span class="tick"><b>+1</b> Ta今天主动找你了</span>
+          <span class="tick tick--minus"><b>−1</b> 已读不回 3 小时</span>
+          <span class="tick"><b>+3</b> Ta记得你不吃香菜</span>
+          <span class="tick"><b>+2</b> 你们对视了 2.4 秒</span>
+          <span class="tick tick--minus"><b>−2</b> Ta夸了别人好看</span>
+          <span class="tick"><b>+5</b> Ta分享了只给你的歌</span>
+          <span class="tick"><b>+1</b> Ta今天主动找你了</span>
+          <span class="tick tick--minus"><b>−1</b> 已读不回 3 小时</span>
+          <span class="tick"><b>+3</b> Ta记得你不吃香菜</span>
+          <span class="tick"><b>+2</b> 你们对视了 2.4 秒</span>
+          <span class="tick tick--minus"><b>−2</b> Ta夸了别人好看</span>
+          <span class="tick"><b>+5</b> Ta分享了只给你的歌</span>
+        </div>
+      </div>
+
+      <section class="how-section" aria-label="测试方式">
+        <div class="how-head">
+          <p class="eyebrow"><span class="live-dot live-dot--violet"></span> HOW IT WORKS</p>
+          <h2>暗恋不是玄学，<br><em>是细节的密度。</em></h2>
+        </div>
+        <div class="how-grid">
+          <article class="how-card">
+            <span class="how-no">01</span>
+            <h3>观察</h3>
+            <p>先回答 10 个关于你的问题，看看你是如何偷偷喜欢一个人的。</p>
+            <span class="how-en">SELF SCAN</span>
+          </article>
+          <article class="how-card">
+            <span class="how-no">02</span>
+            <h3>比对</h3>
+            <p>再用 10 个关于Ta的细节，捕捉主动、关注、偏爱、身体语言和情绪回响。</p>
+            <span class="how-en">SIGNAL MATCH</span>
+          </article>
+          <article class="how-card">
+            <span class="how-no">03</span>
+            <h3>接收回响</h3>
+            <p>得到一份心动侦测报告，和一个只属于你的暗恋人格。</p>
+            <span class="how-en">ECHO REPORT</span>
+          </article>
+        </div>
+        <p class="how-quote">“喜欢不是一道有标准答案的题，<br>但细节会留下回声。”</p>
+      </section>
+
+      <footer class="site-footer">
+        <span>心动回响 · CRUSH ECHO</span>
+        <span>MADE FOR THE ONES WHO NOTICE TOO MUCH</span>
+        <span>© 2026</span>
+      </footer>
+    </section>
+
+    <!-- 设置 -->
+    <section class="view view--setup" id="view-setup" aria-label="设置暗恋侦测">
+      <header class="flow-head">
+        <button class="round-back" type="button" id="btn-setup-back" aria-label="返回首页">←</button>
+        <span class="flow-brand">心动回响 <small>CRUSH ECHO</small></span>
+        <span class="flow-step">SETUP / 01</span>
+      </header>
+      <main class="setup-main">
+        <div class="setup-copy">
+          <p class="eyebrow"><span class="live-dot"></span> BEFORE THE SCAN</p>
+          <h2>先给这场暗恋，<br><em>一个代号。</em></h2>
+          <p class="setup-lede">不用真名。一个你看到就会心跳的称呼就好。<br>它只会出现在你的报告里。</p>
+          <div class="setup-signal" aria-hidden="true">
+            <span class="setup-signal-line"></span>
+            <span>PRIVATE FREQUENCY</span>
+            <span class="setup-signal-line"></span>
+          </div>
+        </div>
+        <div class="setup-form">
+          <label class="field-label" for="crush-name">TA 的代号 <span>OPTIONAL</span></label>
+          <input class="name-input" id="crush-name" type="text" maxlength="12" placeholder="Ta / 小鹿 / L" autocomplete="off">
+          <p class="privacy-note">只保存在当前页面，不会上传。</p>
+
+          <div class="stage-field">
+            <span class="field-label">你们现在是 <span>PICK ONE</span></span>
+            <div class="stage-list" id="stage-list" role="group" aria-label="关系阶段"></div>
+          </div>
+
+          <button class="btn-main btn-main--wide" type="button" id="btn-enter">
+            <span>进入侦测</span>
+            <span class="btn-symbol" aria-hidden="true">↗</span>
+          </button>
+          <button class="btn-quiet btn-quiet--center" type="button" id="btn-skip-setup">不填了，直接开始</button>
+        </div>
+      </main>
+      <span class="setup-watermark" aria-hidden="true">SS</span>
+    </section>
+
+    <!-- 测试 -->
+    <section class="view view--quiz" id="view-quiz" aria-label="暗恋信号测试">
+      <header class="quiz-head">
+        <button class="brand brand--small" type="button" id="btn-quiz-home" aria-label="退出测试，返回首页">
+          <span class="brand-signal" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none">
+              <circle cx="22" cy="22" r="17.5" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="22" cy="22" r="10" stroke="currentColor" stroke-width="1.1" stroke-dasharray="2 3"/>
+              <circle cx="22" cy="22" r="3.2" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="brand-copy"><strong>心动回响</strong><small>CRUSH ECHO</small></span>
+        </button>
+        <div class="quiz-progress">
+          <div class="segment-track" id="segment-track" aria-hidden="true"></div>
+          <span id="quiz-count">01 / 20</span>
+        </div>
+        <button class="quiz-close" type="button" id="btn-quiz-close" aria-label="退出测试">×</button>
+      </header>
+
+      <main class="quiz-main">
+        <div class="quiz-grid">
+          <aside class="quiz-rail">
+            <span class="rail-part" id="rail-part">PART A</span>
+            <span class="rail-number" id="rail-number">01</span>
+            <span class="rail-en" id="rail-en">SELF SCAN</span>
+            <span class="rail-rule"></span>
+            <span class="rail-note" id="rail-note">先看看，你是怎么偷偷喜欢一个人的。</span>
+          </aside>
+          <div class="question-panel" id="question-panel">
+            <div class="question-meta">
+              <span class="part-pill" id="part-pill">你的暗恋侧写</span>
+              <span class="question-index" id="question-index">QUESTION 01</span>
+            </div>
+            <h2 class="question-title" id="question-title" tabindex="-1" aria-live="polite" aria-atomic="true"></h2>
+            <p class="question-hint" id="question-hint"></p>
+            <div class="option-list" id="option-list" role="group" aria-labelledby="question-title"></div>
+            <div class="quiz-foot">
+              <button class="back-btn" type="button" id="btn-prev" disabled><span>←</span> 上一题</button>
+              <span class="quiz-tip">凭第一反应选，别太努力做对。</span>
+              <span class="key-hint" aria-hidden="true"><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd></span>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="quiz-side-note" aria-hidden="true">NO RIGHT ANSWER / ONLY YOUR SIGNAL</div>
+    </section>
+
+    <!-- 分析 -->
+    <section class="view view--analysis" id="view-analysis" aria-label="正在分析暗恋信号">
+      <div class="analysis-head">
+        <span>CRUSH ECHO / SIGNAL ANALYSIS</span>
+        <span class="analysis-rec"><i></i> REC</span>
+      </div>
+      <main class="analysis-main">
+        <div class="analysis-radar" aria-hidden="true">
+          <span class="a-ring a-ring--one"></span>
+          <span class="a-ring a-ring--two"></span>
+          <span class="a-ring a-ring--three"></span>
+          <span class="a-axis a-axis--x"></span>
+          <span class="a-axis a-axis--y"></span>
+          <span class="a-sweep"></span>
+          <span class="a-dot a-dot--one"></span>
+          <span class="a-dot a-dot--two"></span>
+          <span class="a-cross">+</span>
+        </div>
+        <div class="analysis-score">
+          <span class="analysis-kicker">CALCULATING</span>
+          <strong id="analysis-percent">00<small>%</small></strong>
+          <span class="analysis-label">HEART ECHO INDEX</span>
+        </div>
+        <p class="analysis-line" id="analysis-line" aria-live="polite">正在扫描Ta的心动信号</p>
+        <div class="analysis-wave" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </main>
+      <p class="analysis-foot">PLEASE HOLD YOUR BREATH · 20 SIGNALS INCOMING</p>
+    </section>
+
+    <!-- 结果 -->
+    <section class="view view--result" id="view-result" aria-label="暗恋侦测结果">
+      <header class="result-head">
+        <button class="brand brand--light" type="button" id="btn-result-home" aria-label="返回首页">
+          <span class="brand-signal" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none">
+              <circle cx="22" cy="22" r="17.5" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="22" cy="22" r="10" stroke="currentColor" stroke-width="1.1" stroke-dasharray="2 3"/>
+              <circle cx="22" cy="22" r="3.2" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="brand-copy"><strong>心动回响</strong><small>CRUSH ECHO</small></span>
+        </button>
+        <div class="result-head-actions">
+          <button class="nav-link nav-link--light" type="button" data-open-index>暗恋人格图鉴</button>
+          <button class="nav-link nav-link--light" type="button" id="btn-restart-top">重新侦测</button>
+        </div>
+      </header>
+      <div id="result-content"></div>
+      <footer class="result-footer">
+        <button class="text-link" type="button" data-open-index>查看 10 种暗恋人格 <span>↗</span></button>
+        <span class="result-footer-mark">CRUSH ECHO · MADE FOR THE QUIET ONES</span>
+        <button class="text-link" type="button" id="btn-result-restart">再测一次 <span>↻</span></button>
+      </footer>
+    </section>
+  </div>
+
+  <!-- 人格图鉴 -->
+  <div class="modal" id="modal-index" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel index-panel" role="dialog" aria-modal="true" aria-labelledby="index-title">
+      <header class="modal-head">
+        <div>
+          <p class="eyebrow"><span class="live-dot live-dot--violet"></span> THE CRUSH PERSONAS</p>
+          <h2 id="index-title">10 种暗恋人格</h2>
+          <p class="modal-sub">暗恋没有标准答案，只有不同的藏法。</p>
+        </div>
+        <button class="modal-close" type="button" data-close-modal aria-label="关闭">×</button>
+      </header>
+      <div class="index-grid" id="index-grid"></div>
+      <footer class="index-footer">
+        <span>你会在爱里怎么藏？</span>
+        <button class="btn-main btn-main--small" type="button" id="btn-index-start"><span>开始侦测</span><span class="btn-symbol">↗</span></button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- 分享卡 -->
+  <div class="modal" id="modal-share" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel share-panel" role="dialog" aria-modal="true" aria-labelledby="share-title">
+      <header class="modal-head">
+        <div>
+          <p class="eyebrow"><span class="live-dot"></span> SHARE YOUR ECHO</p>
+          <h2 id="share-title">把这份心动，<br>发给懂的人。</h2>
+        </div>
+        <button class="modal-close" type="button" data-close-modal aria-label="关闭">×</button>
+      </header>
+      <div class="share-layout">
+        <div class="share-preview">
+          <div class="share-frame"><img id="share-image" alt="Ta的心动回响分享卡"></div>
+          <span class="share-caption">1080 × 1440 · PNG</span>
+        </div>
+        <div class="share-actions">
+          <p class="share-note">有些答案，不适合直接问。先让这张卡替你说。手机端可长按预览图保存。</p>
+          <button class="btn-main" type="button" id="btn-download"><span>保存分享卡</span><span class="btn-symbol">↓</span></button>
+          <button class="btn-outline" type="button" id="btn-copy">复制分享文案</button>
+          <button class="btn-outline" type="button" id="btn-native-share">分享给朋友</button>
+          <p class="share-tags" id="share-tags"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">这个测试需要开启 JavaScript 才能运行。</div></noscript>
+
+  <script>
+    (function () {
+      var gate = document.getElementById('password-gate');
+      var form = document.getElementById('gate-form');
+      var input = document.getElementById('gate-input');
+      var error = document.getElementById('gate-error');
+      var submit = document.querySelector('.gate-submit');
+      var app = document.getElementById('app');
+      var unlocked = false;
+      var autoTimer = null;
+
+      if (!gate || !form || !input || !submit) return;
+
+      function normalize(value) {
+        return String(value)
+          .replace(/[０-９]/g, function (char) {
+            return String.fromCharCode(char.charCodeAt(0) - 0xfee0);
+          })
+          .replace(/\D/g, '')
+          .slice(0, 4);
+      }
+
+      function showError(message) {
+        if (error) error.textContent = message;
+        input.setAttribute('aria-invalid', 'true');
+        gate.classList.remove('is-error');
+        void gate.offsetWidth;
+        gate.classList.add('is-error');
+        setTimeout(function () {
+          gate.classList.remove('is-error');
+        }, 430);
+      }
+
+      function showToast(message) {
+        var toast = document.getElementById('toast');
+        if (!toast) return;
+        toast.textContent = message;
+        toast.classList.add('is-visible');
+        setTimeout(function () {
+          toast.classList.remove('is-visible');
+        }, 2800);
+      }
+
+      function unlock() {
+        if (unlocked) return;
+        unlocked = true;
+        clearTimeout(autoTimer);
+        submit.disabled = true;
+        input.disabled = true;
+        gate.classList.remove('is-error');
+        gate.classList.add('is-unlocked');
+        gate.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('gate-locked');
+        if (app) app.setAttribute('aria-hidden', 'false');
+
+        setTimeout(function () {
+          gate.style.display = 'none';
+          var start = document.getElementById('btn-start');
+          if (start) {
+            start.classList.add('is-calling');
+            try {
+              start.focus({ preventScroll: true });
+            } catch (focusError) {
+              start.focus();
+            }
+            setTimeout(function () {
+              start.classList.remove('is-calling');
+            }, 2900);
+          }
+          showToast('暗号正确 · 点击「开始侦测」进入测试');
+        }, 720);
+      }
+
+      function processCode() {
+        if (unlocked) return;
+        clearTimeout(autoTimer);
+        var digits = normalize(input.value);
+        input.value = digits;
+        if (digits.length !== 4) {
+          showError('请输入四位数字暗号。');
+          input.focus();
+          return;
+        }
+        if (digits === '3396') {
+          unlock();
+          return;
+        }
+        showError('暗号不对，再试一次。');
+        input.value = '';
+        input.focus();
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        processCode();
+      });
+
+      input.addEventListener('keydown', function (event) {
+        if (event.key !== 'Enter') return;
+        event.preventDefault();
+        processCode();
+      });
+
+      input.addEventListener('input', function () {
+        var digits = normalize(input.value);
+        if (input.value !== digits) input.value = digits;
+        if (error) error.textContent = '';
+        input.removeAttribute('aria-invalid');
+        gate.classList.remove('is-error');
+        clearTimeout(autoTimer);
+        if (digits.length === 4) {
+          autoTimer = setTimeout(function () {
+            if (!unlocked && normalize(input.value).length === 4) processCode();
+          }, 180);
+        }
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (unlocked || event.key !== 'Tab') return;
+        var focusables = [input, submit].filter(function (el) {
+          return el && !el.disabled;
+        });
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      });
+
+      document.body.classList.add('gate-locked');
+      if (app) app.setAttribute('aria-hidden', 'true');
+      setTimeout(function () {
+        if (!unlocked) input.focus();
+      }, 300);
+    })();
+  </script>
+  <script src="data.js?v=20261116-3"></script>
+  <script src="app.js?v=20261116-3"></script>
+</body>
+</html>
